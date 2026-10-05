@@ -1,0 +1,2 @@
+Model,Accuracy,Fake Precision,Fake Recall,Fake F1
+Linear SVM,0.9905,0.98,0.82,0.89

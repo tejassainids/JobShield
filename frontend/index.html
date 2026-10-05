@@ -1,0 +1,707 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>JobShield — Independent Employment Verification</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-background": "#1a1c1c",
+        "outline": "#747686",
+        "on-primary-fixed-variant": "#0039b5",
+        "inverse-on-surface": "#f1f1f0",
+        "on-surface": "#1a1c1c",
+        "primary": "#0037b0",
+        "error-container": "#ffdad6",
+        "tertiary-fixed-dim": "#8bd6b6",
+        "secondary": "#5a5e69",
+        "surface-tint": "#2151da",
+        "surface-container-highest": "#e2e2e2",
+        "on-error": "#ffffff",
+        "on-primary-fixed": "#001551",
+        "tertiary-container": "#17684e",
+        "surface-bright": "#f9f9f8",
+        "surface-container-high": "#e8e8e7",
+        "surface-container-lowest": "#ffffff",
+        "tertiary-fixed": "#a6f2d1",
+        "secondary-fixed-dim": "#c3c6d3",
+        "background": "#f9f9f8",
+        "on-primary": "#ffffff",
+        "surface": "#f9f9f8",
+        "on-secondary": "#ffffff",
+        "primary-fixed": "#dce1ff",
+        "surface-container-low": "#f3f4f3",
+        "outline-variant": "#c4c5d7",
+        "inverse-surface": "#2f3130",
+        "surface-dim": "#dadad9",
+        "on-tertiary-fixed-variant": "#00513b",
+        "error": "#ba1a1a",
+        "surface-container": "#eeeeed",
+        "on-primary-container": "#cad3ff",
+        "tertiary": "#004f39",
+        "on-secondary-fixed": "#181b25",
+        "primary-fixed-dim": "#b7c4ff",
+        "inverse-primary": "#b7c4ff",
+        "on-tertiary": "#ffffff",
+        "primary-container": "#1d4ed8",
+        "on-secondary-container": "#5f626e",
+        "secondary-fixed": "#dfe2ef",
+        "on-error-container": "#93000a",
+        "on-tertiary-fixed": "#002116",
+        "on-secondary-fixed-variant": "#434751",
+        "surface-variant": "#e2e2e2",
+        "on-tertiary-container": "#99e4c4",
+        "secondary-container": "#dcdfed",
+        "on-surface-variant": "#434655"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.5rem",
+        "space-md": "1rem",
+        "margin-sm": "1.25rem",
+        "gutter": "1.5rem",
+        "space-xl": "2.5rem",
+        "margin": "3rem",
+        "space-xs": "0.25rem",
+        "space-lg": "1.5rem",
+        "gutter-sm": "1rem"
+      },
+      "fontFamily": {
+        "label-lg": ["Plus Jakarta Sans"],
+        "body-sm": ["Plus Jakarta Sans"],
+        "body-md": ["Plus Jakarta Sans"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "headline-xl": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "label-sm": ["Plus Jakarta Sans"],
+        "label-md": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "headline-xl-mobile": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400"}],
+        "body-md": ["15px", {"lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+        "body-lg": ["17px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+        "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "headline-xl": ["44px", {"lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.025em", "fontWeight": "600"}],
+        "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "headline-xl-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "700"}]
+      }
+    }
+  }
+};</script><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230037b0'%3E%3Cpath d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z'/%3E%3C/svg%3E"></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 max-w-5xl mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">verified_user</span></div><span class="font-headline-md text-headline-md tracking-tight text-on-surface">JobShield</span><span class="text-outline-variant font-label-md text-label-md select-none">•</span><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Consumer Verification</span></div><div class="flex items-center gap-gutter"><div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low text-tertiary font-label-md text-label-md"><span class="relative flex h-2 w-2 mr-1"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-60"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span>Safety Network Active</div><nav class="flex items-center" data-active-classes="font-label-lg text-primary text-label-lg"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-150" data-path="how-verification-works" href="#">How verification works</a></nav><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="max-w-5xl mx-auto px-gutter py-space-xl"><div class="flex flex-col w-full">
+<!-- Centered Editorial Dossier Canvas -->
+<div class="max-w-4xl mx-auto w-full px-space-sm sm:px-0">
+<!-- Editorial Header & Abstract -->
+<section class="mb-space-xl text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b-0 pb-2">
+<div class="space-y-space-xs max-w-2xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+          Consumer Protection Dossier
+        </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+          Spot suspicious job postings before you apply.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Review a job posting with JobShield and get a clear indication of whether it appears legitimate or potentially fraudulent.
+        </p>
+</div>
+<!-- Quick Preset Triggers -->
+<div class="flex flex-wrap items-center gap-space-xs justify-center md:justify-end self-center md:self-end pt-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all duration-150 shadow-sm" id="btn-sample-verified" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+          Verified Senior Engineer
+        </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all duration-150 shadow-sm" id="btn-sample-scam" type="button">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+          Wire/Check Scam
+        </button>
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-secondary hover:text-on-surface font-label-sm text-label-sm transition-colors duration-150" id="btn-clear-form" type="button">
+<span class="material-symbols-outlined text-[15px]">restart_alt</span>
+          Reset
+        </button>
+</div>
+</section>
+<!-- Main Unified Verification Document -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md sm:p-space-xl space-y-space-xl">
+<!-- Block 01: Role Overview -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">01 / Architecture</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Role Overview</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Core vacancy title, location, and employment terms</p>
+</div>
+<div class="space-y-space-md">
+<!-- Standout Job Title Input -->
+<div class="space-y-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="input-title">Job Title</label>
+<span class="font-label-sm text-label-sm text-secondary">Primary Identifier</span>
+</div>
+<input class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-lg text-body-lg px-4 py-3 rounded-lg outline-none transition-all placeholder:text-outline/50 shadow-inner" id="input-title" placeholder="e.g. Senior Security Engineer, Executive Assistant, Data Analyst" type="text">
+</div>
+<!-- Structured 4-column Parameter Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="input-location">Location</label>
+<input class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded-lg outline-none transition-all placeholder:text-outline/50" id="input-location" placeholder="e.g. US, NY, New York" type="text">
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="select-employment-type">Employment Type</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded-lg outline-none appearance-none cursor-pointer transition-all" id="select-employment-type">
+<option value="Full-time">Full-time</option>
+<option value="Part-time">Part-time</option>
+<option value="Contract">Contract</option>
+<option value="Temporary">Temporary</option>
+<option value="Other">Other</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="select-experience">Required Experience</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded-lg outline-none appearance-none cursor-pointer transition-all" id="select-experience">
+<option value="Mid-Senior level">Mid-Senior level</option>
+<option value="Entry level">Entry level</option>
+<option value="Associate">Associate</option>
+<option value="Director">Director</option>
+<option value="Executive">Executive</option>
+<option value="Not Applicable">Not Applicable</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="select-education">Required Education</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded-lg outline-none appearance-none cursor-pointer transition-all" id="select-education">
+<option value="Bachelor's Degree">Bachelor's Degree</option>
+<option value="Master's Degree">Master's Degree</option>
+<option value="High School or equivalent">High School / Eqv</option>
+<option value="Unspecified">Unspecified</option>
+<option value="Other">Other</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Soft Internal Inset Divider -->
+<div class="h-px bg-surface-container-high w-full"></div>
+<!-- Block 02: Organization & Domain -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">02 / Entity</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Hiring Organization</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Entity pedigree, industry, and organizational scope</p>
+</div>
+<div class="space-y-space-md">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="input-industry">Industry Sector</label>
+<input class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded-lg outline-none transition-all placeholder:text-outline/50" id="input-industry" placeholder="e.g. Information Technology, Financial Services" type="text">
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="input-function">Job Function</label>
+<input class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded-lg outline-none transition-all placeholder:text-outline/50" id="input-function" placeholder="e.g. Engineering, Information Technology, Customer Service" type="text">
+</div>
+</div>
+<div class="space-y-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="input-company-profile">Company Profile</label>
+<span class="font-label-sm text-label-sm text-secondary">Stated Mission, Scale, &amp; Background</span>
+</div>
+<textarea class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md p-3.5 rounded-lg outline-none transition-all resize-y placeholder:text-outline/50 leading-relaxed" id="input-company-profile" placeholder="Brief company history, mission, headquarters, or operating scale as presented in the listing..." rows="3"></textarea>
+</div>
+</div>
+</section>
+<!-- Soft Internal Inset Divider -->
+<div class="h-px bg-surface-container-high w-full"></div>
+<!-- Block 03: Posting Narrative & Substance -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">03 / Discourse</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Listing Content</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Linguistic body, required capabilities, and remuneration</p>
+</div>
+<div class="space-y-space-md">
+<!-- Main Description -->
+<div class="space-y-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="input-description">
+                Job Description <span class="text-primary font-bold">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-secondary" id="desc-counter">0 characters</span>
+</div>
+<textarea class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md p-3.5 rounded-lg outline-none transition-all resize-y placeholder:text-outline/50 leading-relaxed shadow-inner" id="input-description" placeholder="Paste the complete responsibilities and role summary verbatim from the job board..." rows="5"></textarea>
+</div>
+<!-- Requirements & Benefits Dual Textarea Split -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="input-requirements">Requirements &amp; Qualifications</label>
+<textarea class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md p-3.5 rounded-lg outline-none transition-all resize-y placeholder:text-outline/50 leading-relaxed" id="input-requirements" placeholder="Skills, years of expertise, required certifications, software stack..." rows="4"></textarea>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold" for="input-benefits">Offered Benefits &amp; Compensation</label>
+<textarea class="w-full bg-surface-container-low focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md p-3.5 rounded-lg outline-none transition-all resize-y placeholder:text-outline/50 leading-relaxed" id="input-benefits" placeholder="Stated salary range, equipment stipends, health coverage, bonuses, equity..." rows="4"></textarea>
+</div>
+</div>
+</div>
+</section>
+<!-- Soft Internal Inset Divider -->
+<div class="h-px bg-surface-container-high w-full"></div>
+<!-- Block 04: Public Listing Signals & Behavioral Flags -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">04 / Telemetry</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Listing Signals</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Structural posting indicators from the source platform</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Signal 1: Telecommuting -->
+<button class="text-left bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-150 flex flex-col justify-between h-32 group select-none relative overflow-hidden" id="card-toggle-telecommuting" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="material-symbols-outlined text-[20px] text-secondary group-hover:text-primary transition-colors">home_work</span>
+<div class="w-10 h-6 bg-surface-container-highest rounded-full p-0.5 transition-colors duration-200 ease-in-out flex items-center" id="switch-telecommuting">
+<div class="switch-handle w-5 h-5 bg-surface-container-lowest rounded-full shadow-sm transform transition-transform duration-200"></div>
+</div>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">Remote / Telecommute</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Work-from-home or distributed</div>
+</div>
+</button>
+<!-- Signal 2: Company Logo -->
+<button class="text-left bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-150 flex flex-col justify-between h-32 group select-none relative overflow-hidden" id="card-toggle-logo" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="material-symbols-outlined text-[20px] text-secondary group-hover:text-primary transition-colors">branding_watermark</span>
+<div class="w-10 h-6 bg-surface-container-highest rounded-full p-0.5 transition-colors duration-200 ease-in-out flex items-center" id="switch-logo">
+<div class="switch-handle w-5 h-5 bg-surface-container-lowest rounded-full shadow-sm transform transition-transform duration-200"></div>
+</div>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">Company Logo Attached</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Authentic branding visible</div>
+</div>
+</button>
+<!-- Signal 3: Screening Questions -->
+<button class="text-left bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-150 flex flex-col justify-between h-32 group select-none relative overflow-hidden" id="card-toggle-questions" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="material-symbols-outlined text-[20px] text-secondary group-hover:text-primary transition-colors">quiz</span>
+<div class="w-10 h-6 bg-surface-container-highest rounded-full p-0.5 transition-colors duration-200 ease-in-out flex items-center" id="switch-questions">
+<div class="switch-handle w-5 h-5 bg-surface-container-lowest rounded-full shadow-sm transform transition-transform duration-200"></div>
+</div>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">Screening Questions</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Requires qualifying responses</div>
+</div>
+</button>
+</div>
+</section>
+<!-- Section: Verification Execution Bar -->
+<section class="pt-space-sm">
+<div class="bg-surface-container-low p-4 sm:p-5 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm text-center sm:text-left">
+<span class="material-symbols-outlined text-[20px] text-primary">security</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Forensic Posting Inspection</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Examines contextual coherence, syntax, and legitimacy cues</div>
+</div>
+</div>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg transition-all duration-200 shadow-md hover:shadow-lg active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed" id="btn-submit-verify" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="">Run JobShield Verification</span>
+</button>
+</div>
+</section>
+<!-- Integrated Dynamic Result Container (Smooth in-flow appearance) -->
+<div class="pt-2 scroll-mt-20" id="result-anchor">
+<!-- State 1: Idle Reassurance Note -->
+<div class="bg-surface-container-low/60 rounded-xl p-6 text-center text-on-surface-variant space-y-1" id="state-idle">
+<div class="flex items-center justify-center gap-1.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">info</span>
+            Ready for Analysis
+          </div>
+<p class="font-body-sm text-body-sm max-w-md mx-auto">
+            Complete the fields above and select <strong class="text-on-surface font-medium">Run JobShield Verification</strong> to inspect the listing.
+          </p>
+</div>
+<!-- State 2: Active Evaluation Progress -->
+<div class="hidden bg-surface-container-low rounded-xl p-8 text-center space-y-4" id="state-loading">
+<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-fixed text-primary">
+<span class="material-symbols-outlined text-[24px] animate-spin">sync</span>
+</div>
+<div class="space-y-1">
+<div class="font-headline-md text-headline-md text-on-surface">Analyzing posting integrity...</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mx-auto">
+              Comparing linguistic patterns, employer signals, and structural consistency markers.
+            </p>
+</div>
+<!-- Progress bar track -->
+<div class="w-48 mx-auto h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary animate-pulse w-3/4 rounded-full"></div>
+</div>
+</div>
+<!-- State 3: Authentic / Real Verdict -->
+<div class="hidden rounded-xl p-6 sm:p-8 space-y-5 bg-[#ECFDF5] text-[#065F46] shadow-sm" id="state-real">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#A7F3D0]/70 pb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#10B981]/20 flex items-center justify-center text-[#065F46]">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<span class="text-xs uppercase tracking-widest font-bold text-[#047857]">Verification Verdict</span>
+<div class="font-headline-lg text-headline-lg font-bold tracking-tight">REAL JOB POSTING</div>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D1FAE5] text-[#065F46] text-xs font-semibold self-start sm:self-auto">
+<span class="w-2 h-2 rounded-full bg-[#059669]"></span>
+              High Integrity Match
+            </div>
+</div>
+<p class="text-base text-[#065F46] leading-relaxed">
+            JobShield's analysis indicates that this posting appears legitimate. The structural vocabulary, company parameters, and stated requirements align with authentic recruitment listings.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+<div class="bg-white/70 p-3 rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#059669] shrink-0 mt-0.5">check_circle</span>
+<span class="text-xs font-medium text-[#065F46]">Consistent compensation syntax</span>
+</div>
+<div class="bg-white/70 p-3 rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#059669] shrink-0 mt-0.5">check_circle</span>
+<span class="text-xs font-medium text-[#065F46]">Authentic role scope &amp; tone</span>
+</div>
+<div class="bg-white/70 p-3 rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#059669] shrink-0 mt-0.5">check_circle</span>
+<span class="text-xs font-medium text-[#065F46]">Natural linguistic structure</span>
+</div>
+</div>
+</div>
+<!-- State 4: Threat / Fake Verdict -->
+<div class="hidden rounded-xl p-6 sm:p-8 space-y-5 bg-[#FEF2F2] text-[#991B1B] shadow-sm" id="state-fake">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#FECACA]/80 pb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#EF4444]/20 flex items-center justify-center text-[#991B1B]">
+<span class="material-symbols-outlined text-[24px]">gpp_bad</span>
+</div>
+<div>
+<span class="text-xs uppercase tracking-widest font-bold text-[#B91C1C]">Verification Verdict</span>
+<div class="font-headline-lg text-headline-lg font-bold tracking-tight">FAKE JOB POSTING</div>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FEE2E2] text-[#991B1B] text-xs font-semibold self-start sm:self-auto">
+<span class="w-2 h-2 rounded-full bg-[#DC2626]"></span>
+              Elevated Risk Detected
+            </div>
+</div>
+<p class="text-base text-[#991B1B] leading-relaxed">
+            JobShield's analysis indicates that this posting may be fraudulent. It exhibits high-risk linguistic phrasing and anomalous hiring patterns frequently associated with employment scams.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+<div class="bg-white/70 p-3 rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#DC2626] shrink-0 mt-0.5">crisis_alert</span>
+<span class="text-xs font-medium text-[#991B1B]">Irregular contact or domain cues</span>
+</div>
+<div class="bg-white/70 p-3 rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#DC2626] shrink-0 mt-0.5">crisis_alert</span>
+<span class="text-xs font-medium text-[#991B1B]">Suspicious compensation structure</span>
+</div>
+<div class="bg-white/70 p-3 rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-[#DC2626] shrink-0 mt-0.5">crisis_alert</span>
+<span class="text-xs font-medium text-[#991B1B]">Advance-fee or interview red flags</span>
+</div>
+</div>
+</div>
+<!-- State 5: System / Connection Alert -->
+<div class="hidden rounded-xl p-5 bg-surface-container-high text-on-surface flex items-start gap-3" id="state-error">
+<span class="material-symbols-outlined text-[20px] text-error shrink-0 mt-0.5">report_problem</span>
+<div class="space-y-1">
+<div class="font-label-lg text-label-lg font-semibold text-on-surface">Inspection Gateway Unavailable</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Unable to reach the verification service. Please ensure the backend service is active and try again.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Assurance Trust Bar -->
+<div class="mt-space-lg flex flex-wrap items-center justify-between text-secondary font-label-sm text-label-sm px-2 gap-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-tertiary">lock</span>
+        Zero Personal PII Logged to External Databases
+      </div>
+<div class="">Forensic Text Analysis • Updated 2026 Core Ruleset</div>
+</div>
+</div>
+<script>
+    (function() {
+      // Input Element References
+      const elTitle = document.getElementById('input-title');
+      const elLocation = document.getElementById('input-location');
+      const elEmploymentType = document.getElementById('select-employment-type');
+      const elExperience = document.getElementById('select-experience');
+      const elEducation = document.getElementById('select-education');
+      const elIndustry = document.getElementById('input-industry');
+      const elFunction = document.getElementById('input-function');
+      const elCompanyProfile = document.getElementById('input-company-profile');
+      const elDescription = document.getElementById('input-description');
+      const elRequirements = document.getElementById('input-requirements');
+      const elBenefits = document.getElementById('input-benefits');
+      const descCounter = document.getElementById('desc-counter');
+
+      // Toggle state tracking (0 or 1)
+      let stateTelecommuting = 0;
+      let stateLogo = 0;
+      let stateQuestions = 0;
+
+      // Toggle Element references
+      const cardTelecommuting = document.getElementById('card-toggle-telecommuting');
+      const switchTelecommuting = document.getElementById('switch-telecommuting');
+
+      const cardLogo = document.getElementById('card-toggle-logo');
+      const switchLogo = document.getElementById('switch-logo');
+
+      const cardQuestions = document.getElementById('card-toggle-questions');
+      const switchQuestions = document.getElementById('switch-questions');
+
+      // Result States
+      const stateIdle = document.getElementById('state-idle');
+      const stateLoading = document.getElementById('state-loading');
+      const stateReal = document.getElementById('state-real');
+      const stateFake = document.getElementById('state-fake');
+      const stateError = document.getElementById('state-error');
+      const resultAnchor = document.getElementById('result-anchor');
+      const submitBtn = document.getElementById('btn-submit-verify');
+
+      // Helper for toggle visual state
+      function setToggleState(elSwitch, active) {
+        const handle = elSwitch.querySelector('.switch-handle');
+        if (active === 1) {
+          elSwitch.classList.remove('bg-surface-container-highest');
+          elSwitch.classList.add('bg-primary');
+          handle.classList.add('translate-x-4');
+        } else {
+          elSwitch.classList.remove('bg-primary');
+          elSwitch.classList.add('bg-surface-container-highest');
+          handle.classList.remove('translate-x-4');
+        }
+      }
+
+      cardTelecommuting.addEventListener('click', () => {
+        stateTelecommuting = stateTelecommuting === 1 ? 0 : 1;
+        setToggleState(switchTelecommuting, stateTelecommuting);
+      });
+
+      cardLogo.addEventListener('click', () => {
+        stateLogo = stateLogo === 1 ? 0 : 1;
+        setToggleState(switchLogo, stateLogo);
+      });
+
+      cardQuestions.addEventListener('click', () => {
+        stateQuestions = stateQuestions === 1 ? 0 : 1;
+        setToggleState(switchQuestions, stateQuestions);
+      });
+
+      // Description live counter
+      elDescription.addEventListener('input', () => {
+        const len = elDescription.value.length;
+        descCounter.textContent = `${len.toLocaleString()} characters`;
+      });
+
+      // Helper to set all states hidden
+      function hideAllStates() {
+        stateIdle.classList.add('hidden');
+        stateLoading.classList.add('hidden');
+        stateReal.classList.add('hidden');
+        stateFake.classList.add('hidden');
+        stateError.classList.add('hidden');
+      }
+
+      function showState(targetEl) {
+        hideAllStates();
+        targetEl.classList.remove('hidden');
+      }
+
+      // Preset Samples
+      const verifiedSample = {
+        title: "Staff Cloud Infrastructure Engineer",
+        location: "US, CA, San Francisco",
+        employmentType: "Full-time",
+        experience: "Mid-Senior level",
+        education: "Bachelor's Degree",
+        industry: "Information Technology and Services",
+        func: "Engineering",
+        companyProfile: "A leading distributed database pioneer founded in 2012, serving over 1,500 enterprise customers globally with headquarters in San Francisco and regional engineering centers in Seattle and Zurich.",
+        description: "We are seeking an experienced Staff Cloud Infrastructure Engineer to scale our distributed consensus engine and Kubernetes operational substrate. In this role, you will architect multi-region failover protocols, optimize container scheduling latency, and partner with core telemetry teams to ensure 99.999% availability across global clusters.",
+        requirements: "7+ years hands-on experience designing and operating multi-tenant cloud architectures (AWS/GCP). Deep proficiency with Go, Rust, or modern C++. Strong track record managing Kubernetes at enterprise scale and implementing zero-trust network boundaries.",
+        benefits: "Competitive base salary ($180,000 - $225,000), equity grant, comprehensive medical/dental/vision with full dependent coverage, $4,000 annual education stipend, and 401(k) matching up to 5%.",
+        telecommuting: 1,
+        logo: 1,
+        questions: 1
+      };
+
+      const scamSample = {
+        title: "Immediate Remote Data Entry Specialist - Urgent Hire",
+        location: "US, Remote",
+        employmentType: "Full-time",
+        experience: "Entry level",
+        education: "High School or equivalent",
+        industry: "Management Consulting",
+        func: "Customer Service",
+        companyProfile: "Global international logistics conglomerate handling VIP shipments worldwide. Excellent opportunity for hard working individuals seeking fast promotion.",
+        description: "URGENT OPPORTUNITY: We need data entry assistants immediately! Work from anywhere using your computer or phone. Flexible hours (2-3 hrs daily). You will be sent an official company check via courier to purchase your home office setup and specialized encryption software from our certified supplier before commencing assignment. Telegram or WhatsApp interview only.",
+        requirements: "No prior experience necessary. Must possess reliable internet connection, honest work ethic, and ability to deposit incoming company equipment cashier checks into personal checking account for swift vendor wire release.",
+        benefits: "$45 - $65 per hour paid weekly directly. Free home office laptops and mobile phones provided immediately following successful equipment check clearance.",
+        telecommuting: 1,
+        logo: 0,
+        questions: 0
+      };
+
+      function fillForm(data) {
+        elTitle.value = data.title;
+        elLocation.value = data.location;
+        elEmploymentType.value = data.employmentType;
+        elExperience.value = data.experience;
+        elEducation.value = data.education;
+        elIndustry.value = data.industry;
+        elFunction.value = data.func;
+        elCompanyProfile.value = data.companyProfile;
+        elDescription.value = data.description;
+        elRequirements.value = data.requirements;
+        elBenefits.value = data.benefits;
+
+        stateTelecommuting = data.telecommuting;
+        setToggleState(switchTelecommuting, stateTelecommuting);
+
+        stateLogo = data.logo;
+        setToggleState(switchLogo, stateLogo);
+
+        stateQuestions = data.questions;
+        setToggleState(switchQuestions, stateQuestions);
+
+        descCounter.textContent = `${data.description.length.toLocaleString()} characters`;
+        showState(stateIdle);
+      }
+
+      document.getElementById('btn-sample-verified').addEventListener('click', () => {
+        fillForm(verifiedSample);
+      });
+
+      document.getElementById('btn-sample-scam').addEventListener('click', () => {
+        fillForm(scamSample);
+      });
+
+      document.getElementById('btn-clear-form').addEventListener('click', () => {
+        elTitle.value = '';
+        elLocation.value = '';
+        elEmploymentType.selectedIndex = 0;
+        elExperience.selectedIndex = 0;
+        elEducation.selectedIndex = 0;
+        elIndustry.value = '';
+        elFunction.value = '';
+        elCompanyProfile.value = '';
+        elDescription.value = '';
+        elRequirements.value = '';
+        elBenefits.value = '';
+        
+        stateTelecommuting = 0;
+        setToggleState(switchTelecommuting, 0);
+        stateLogo = 0;
+        setToggleState(switchLogo, 0);
+        stateQuestions = 0;
+        setToggleState(switchQuestions, 0);
+
+        descCounter.textContent = '0 characters';
+        showState(stateIdle);
+      });
+
+      // Verification Execution Handler
+      submitBtn.addEventListener('click', async () => {
+        const title = elTitle.value.trim();
+        const description = elDescription.value.trim();
+
+        if (!title && !description) {
+          elTitle.focus();
+          return;
+        }
+
+        submitBtn.disabled = true;
+        showState(stateLoading);
+        resultAnchor.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        const payload = {
+          title: elTitle.value.trim(),
+          location: elLocation.value.trim(),
+          employment_type: elEmploymentType.value,
+          required_experience: elExperience.value,
+          required_education: elEducation.value,
+          industry: elIndustry.value.trim(),
+          function: elFunction.value.trim(),
+          company_profile: elCompanyProfile.value.trim(),
+          description: elDescription.value.trim(),
+          requirements: elRequirements.value.trim(),
+          benefits: elBenefits.value.trim(),
+          telecommuting: stateTelecommuting,
+          has_company_logo: stateLogo,
+          has_questions: stateQuestions
+        };
+
+        try {
+          const response = await fetch('http://127.0.0.1:8000/predict', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          if (!response.ok) {
+            throw new Error(`HTTP status ${response.status}`);
+          }
+
+          const result = await response.json();
+
+          if (result && result.prediction) {
+            const pred = String(result.prediction).toLowerCase();
+            if (pred === 'real') {
+              showState(stateReal);
+            } else if (pred === 'fake') {
+              showState(stateFake);
+            } else {
+              showState(stateError);
+            }
+          } else {
+            showState(stateError);
+          }
+        } catch (err) {
+          showState(stateError);
+        } finally {
+          submitBtn.disabled = false;
+          resultAnchor.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    })();
+  </script>
+</div></div></main><footer class="w-full bg-surface-container-lowest mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="max-w-5xl mx-auto px-gutter py-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs text-center sm:text-left"><span class="font-semibold text-on-surface">JobShield</span><span class="">—</span><span class="">Empowering job seekers with independent employment verification</span></div><div class="flex items-center gap-gutter text-label-sm font-label-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-ledger" href="#">Privacy Ledger</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-protection" href="#">Terms of Protection</a><span class="text-outline-variant">© 2026 JobShield Core</span></div></div></footer>
+
+</body></html>
